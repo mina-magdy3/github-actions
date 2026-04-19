@@ -6,7 +6,7 @@ permissions:
   packages: write
 jobs:
     job_1:
-        runs-on: linux-vm
+        runs-on: ubuntu-latest
         steps:
             - name: code checkout
               uses: actions/checkout@v4
