@@ -1,4 +1,4 @@
-name: SelfHosted Runner
+name: docker-runner
 
 on:
   workflow_dispatch:
@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   build:
-    runs-on: docker
+    runs-on: linux-vm
     steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-node@v6.1.0
