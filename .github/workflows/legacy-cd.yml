@@ -22,7 +22,7 @@ jobs:
                      name: react-app-build
                      path: dist/
     build:
-        runs-on: linux-vm
+        runs-on: ubuntu-latest
         needs: job1
         steps:
             - name: download artifact
