@@ -7,5 +7,5 @@ jobs:
         steps:
           - uses: mina-magdy3/custom-action-using-docker/.github/actions/folder@main
             with:
-                messsage: "hello world"
+                 messsage: "hello world"
                  

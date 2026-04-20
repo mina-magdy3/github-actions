@@ -1,0 +1,13 @@
+name: docker custom action
+description: just say hi
+inputs:
+  message:
+    type: string
+    required: true
+outputs:
+  output1:
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.message }}
