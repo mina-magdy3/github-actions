@@ -12,7 +12,7 @@ jobs:
   React-CI:
     uses: mina-magdy3/github-actions/.github/workflows/template.yml@main
     with:
-      node-version: '20'
+      node_version: '20'
       docker_imagename: react-app-cicd
       lint_phase: false
       unit_test: false
