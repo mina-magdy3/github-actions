@@ -1,0 +1,11 @@
+name: custom action using docker 
+on:
+    workflow_dispatch:
+jobs:
+    job1:
+        runs-on: ubuntu-latest
+        steps:
+          - uses: mina-magdy3/custom-action-using-docker/tree/main/.github/actions/folder@main
+            with:
+                messsage: "hello world"
+                 
