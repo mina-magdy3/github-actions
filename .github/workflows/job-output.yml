@@ -1,4 +1,4 @@
-name: step output
+name: job output
 on:
    workflow_dispatch:
 jobs:
