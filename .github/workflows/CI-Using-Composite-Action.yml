@@ -13,7 +13,7 @@ jobs:
         runs-on: ubuntu-latest
         steps: 
             - uses: actions/checkout@v4
-            - uses: mina-magdy3/github-actions/.github/actions/composite-action/action.yml@main
+            - uses: mina-magdy3/github-actions/.github/actions/action.yml@main
               with:
                   node_version: 20
                   cache-path: |
