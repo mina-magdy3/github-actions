@@ -1,0 +1,20 @@
+name: "composite-action"
+inputs:
+  node_version: 
+    required: true
+  cache_path:
+    required: true
+runs:
+     using: "composite"
+     steps: 
+            - uses: actions/setup-node@v6
+              with:
+                node-version: ${{inputs.node_version}}
+            - uses: actions/cache@v3
+              id: npm-check
+              with:
+                path: ${{inputs.cache_path}}
+                key: ${{runner.os}}-node-${{hashFiles('**/package-lock.json')}}
+                restore-keys: ${{runner.os}}-node-
+            - run: npm install
+              if: steps.npm-check.outputs.cache-hit != 'true'
