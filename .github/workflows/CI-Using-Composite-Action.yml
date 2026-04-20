@@ -16,7 +16,7 @@ jobs:
             - uses: mina-magdy3/github-actions/.github/actions/composite-action@main
               with:
                   node_version: 20
-                  cache-path: |
+                  cache_path: |
                     node_modules
                     ~/.npm
             - run: npm run lint
