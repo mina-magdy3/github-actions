@@ -10,14 +10,18 @@ permissions:
 
 jobs:
   React-CI:
-    uses: mohammedd2510/Reusable-Workflows-Custom-Actions/.github/workflows/React-CI-Template.yml@main
+    uses: minamagdy3/github-actions/.github/workflows/template.yml@main
     with:
       node-version: '20'
-      image_name: react-app-cicd
+      docker_imagename: react-app-cicd
       lint_phase: false
       unit_test: false
+      docker_username: ${{ github.actor }}
+      docker_registery: ghcr.io
+      docker_tag: latest
+
 
     secrets:
-        DOCKER_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
+        docker_password: ${{ secrets.GITHUB_TOKEN }}
     
 
