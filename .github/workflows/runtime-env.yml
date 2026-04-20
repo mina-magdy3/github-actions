@@ -6,10 +6,10 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - run: |
-                echo "GREETING=$(Hello,github actions)" >> $GITHUB_ENV
+                echo "GREETING=(Hello,github actions)" >> $GITHUB_ENV
             - run : |
                 echo "$GREETING"
             - run: |
-                 echo "GREETING=$(Hello,your name,github actions)" >> $GITHUB_ENV
+                 echo "GREETING=(Hello,your name,github actions)" >> $GITHUB_ENV
             - run : |
                  echo "$GREETING"
