@@ -1,0 +1,20 @@
+name: step output
+on:
+   workflow_dispatch:
+jobs:
+    generate-message:
+        runs-on: ubuntu-latest
+        outputs: 
+            job_message: ${{steps.step-message.outputs.message}}
+        steps:
+           - id: step-message
+             run: |
+               MESSAGE= "hello from job 1 "
+               echo "message=$MESSAGE" >> GITHUB_OUTPUT
+    consume_message:
+        runs-on: ubuntu-latest
+        needs: generate-message
+        steps:
+            - run: |
+               echo " ${{needs.generate-message.outputs.job_message}} "            
+            
