@@ -9,7 +9,7 @@ jobs:
         steps:
            - id: step-message
              run: |
-               MESSAGE= "hello from job 1 "
+               MESSAGE=" hello from job 1 "
                echo "message=$MESSAGE" >> GITHUB_OUTPUT
     consume_message:
         runs-on: ubuntu-latest
