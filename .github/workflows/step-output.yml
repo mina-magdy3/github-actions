@@ -9,7 +9,7 @@ jobs:
                 RANDOM_NUMBER=$(( RANDOM % 10 + 1))
                 echo " random_number=$RANDOM_NUMBER" >> $GITHUB_OUTPUT
               id: step1
-            - run: echo " random number is greater than 5 : $(random_number) "
-              if: random_number > 5 
+            - run: echo "random number is greater than 5:$(steps.step1.outputs.random_number)"
+              if: ${{ steps.step1.outputs.random_number > 5}} 
             - run: echo "workflow completed"
               if: always()
