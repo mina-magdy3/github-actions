@@ -5,7 +5,7 @@ jobs:
     job1:
         runs-on: ubuntu-latest
         steps:
-          - uses: mina-magdy3/custom-action-using-docker/.github/actions/folder@main
+          - uses: mina-magdy3/github-actions/.github/actions/docker-custom-action@main
             with:
-                 messsage: "hello world"
+                  messsage: "hello world"
                  
