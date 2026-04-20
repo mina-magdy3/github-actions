@@ -10,6 +10,7 @@ jobs:
            - id: step-message
              run: |    
                echo "message=(hello from job 1)" >> GITHUB_OUTPUT
+               echo "${{steps.step-message.outputs.message}}"
     consume_message:
         runs-on: ubuntu-latest
         needs: generate-message
