@@ -8,7 +8,7 @@ jobs:
             - run: |
                 echo "GREETING=$(Hello,github actions)" >> $GITHUB_ENV
             - run : |
-                echo $GREETING
+                echo "$GREETING"
             - run: |
                  echo "GREETING=$(Hello,your name,github actions)" >> $GITHUB_ENV
             - run : |
