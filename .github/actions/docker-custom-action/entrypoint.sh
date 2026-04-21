@@ -1,6 +1,6 @@
 #!/bin/sh
 set -e
 
-message=$1
+MESSAGE=$1
 
-echo "output1=(docker says: hello world)" >> $GITHUB_OUTPUT
+echo "output1=docker says:$MESSAGE" >> $GITHUB_OUTPUT
